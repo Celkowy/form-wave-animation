@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: steelblue;
+  font-family: 'Muli', sans-serif;
+  color: white;
+}
+
+.wrapper {
+  padding: 20px 40px;
+  background-color: #2a4e6c;
+  border-radius: 5px;
+}
+
+.wrapper h1 {
+  text-align: center;
+  margin: 30px;
+}
+
+.form-inside {
+  position: relative;
+  margin: 50px 0;
+  width: 300px;
+}
+
+label {
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  padding: 5px 0;
+  color: #fff;
+  font-size: 16px;
+  transition: border-bottom-color 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.btn {
+  width: 100%;
+  background-color: #add8e6;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+  transform: scale(0.98);
+}
+
+form p {
+  padding: 25px 0 0;
+  margin: 15px 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: lightblue;
+}
+
+span {
+  display: inline-block;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-inside input:focus + label span,
+.form-inside input:valid + label span {
+  transform: translateY(-25px);
+  color: lightblue;
+}
+
+.form-inside input:focus,
+.form-inside input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+
+@media (max-width: 480px) {
+  .form-inside {
+    width: 100%;
+  }
+}
